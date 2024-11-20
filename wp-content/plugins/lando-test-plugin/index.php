@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Lando-test-plugin
+Plugin Name: Lando-Test-Plugin
 Plugin URI: http://akismet.com/
 Version: 1.0.0
 Author: Edlando Eliacin
