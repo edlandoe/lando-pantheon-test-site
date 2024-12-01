@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name:       Photoshoot Themes
- * Description:       Example block scaffolded with Create Block tool.
+ * Description:       A block that shows different photography packages.
  * Requires at least: 6.6
  * Requires PHP:      7.2
  * Version:           1.0
