@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This config file is yours to hack on. It will work out of the box on Pantheon
  * but you may find there are a lot of neat tricks to be used here.
@@ -14,23 +15,23 @@
 if (file_exists(dirname(__FILE__) . '/wp-config-pantheon.php') && isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 	require_once(dirname(__FILE__) . '/wp-config-pantheon.php');
 
-/**
- * Local configuration information.
- *
- * If you are working in a local/desktop development environment and want to
- * keep your config separate, we recommend using a 'wp-config-local.php' file,
- * which you should also make sure you .gitignore.
- */
-} elseif (file_exists(dirname(__FILE__) . '/wp-config-local.php') && !isset($_ENV['PANTHEON_ENVIRONMENT'])){
+	/**
+	 * Local configuration information.
+	 *
+	 * If you are working in a local/desktop development environment and want to
+	 * keep your config separate, we recommend using a 'wp-config-local.php' file,
+	 * which you should also make sure you .gitignore.
+	 */
+} elseif (file_exists(dirname(__FILE__) . '/wp-config-local.php') && !isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 	# IMPORTANT: ensure your local config does not include wp-settings.php
 	require_once(dirname(__FILE__) . '/wp-config-local.php');
 
-/**
- * This block will be executed if you are NOT running on Pantheon and have NO
- * wp-config-local.php. Insert alternate config here if necessary.
- *
- * If you are only running on Pantheon, you can ignore this block.
- */
+	/**
+	 * This block will be executed if you are NOT running on Pantheon and have NO
+	 * wp-config-local.php. Insert alternate config here if necessary.
+	 *
+	 * If you are only running on Pantheon, you can ignore this block.
+	 */
 } else {
 	define('DB_NAME',          'database_name');
 	define('DB_USER',          'database_username');
@@ -59,6 +60,7 @@ if (file_exists(dirname(__FILE__) . '/wp-config-pantheon.php') && isset($_ENV['P
  */
 $table_prefix = 'wp_';
 
+define('WP_DEVELOPMENT_MODE', 'theme');
 /**
  * For developers: WordPress debugging mode.
  *
@@ -69,7 +71,7 @@ $table_prefix = 'wp_';
  * You may want to examine $_ENV['PANTHEON_ENVIRONMENT'] to set this to be
  * "true" in dev, but false in test and live.
  */
-if ( ! defined( 'WP_DEBUG' ) ) {
+if (! defined('WP_DEBUG')) {
 	define('WP_DEBUG', false);
 }
 
@@ -79,7 +81,7 @@ if ( ! defined( 'WP_DEBUG' ) ) {
 
 
 /** Absolute path to the WordPress directory. */
-if ( !defined('ABSPATH') )
+if (!defined('ABSPATH'))
 	define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
