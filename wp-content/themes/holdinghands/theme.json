@@ -2,7 +2,14 @@
   "$schema": "https://schemas.wp.org/trunk/theme.json",
   "version": 3,
   "settings": {
-    "appearanceTools": true
+    "appearanceTools": true,
+    "color": {
+      "defaultPalette": true
+    },
+    "layout": {
+      "contentSize": "620px",
+      "wideSize": "800px"
+    }
   },
   "styles": {}
 }
